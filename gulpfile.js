@@ -6,7 +6,8 @@ var gulp = require("gulp"),
 	bourbon = require("node-bourbon").includePaths,
 	neat = require("node-neat").includePaths,
 	htmlmin = require('gulp-htmlmin'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	cssnano = require('gulp-cssnano');
 
 // Compiles all gulp tasks
 gulp.task("default", ["sass", "minify"]);
@@ -33,6 +34,7 @@ gulp.task("sass", function() {
 			includePaths: bourbon,
 			includePaths: neat
 		}))
+		.pipe(cssnano())
 		.pipe(gulp.dest("dist/css"))
 		.pipe(autoprefixer({
             browsers: ['last 2 version',
@@ -42,6 +44,7 @@ gulp.task("sass", function() {
 	        'ios 6',
 	        'android 4']
         }))
+
 		.pipe(browserSync.reload({
 			stream: true
 		}))
