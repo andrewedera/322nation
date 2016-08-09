@@ -1,0 +1,27 @@
+{
+  "name": "322nation",
+  "version": "1.0.0",
+  "description": "Simple website template using npm, Gulp, Sass, Bourbon & Neat",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "322",
+    "322nation",
+    "322",
+    "guild"
+  ],
+  "author": "Mash",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
+    "node-normalize-scss": "^1.3.2"
+  }
+}
